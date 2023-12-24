@@ -1,0 +1,66 @@
+<% include ./partials/header.ejs  %>
+
+<div class="min-h-screen bg-black">
+
+    <div class="contactme text-center text-4xl py-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-grey-300">
+         Contact Me
+    </div>
+
+    <div class="details  w-4/5 m-auto  text-transparent bg-clip-text bg-gradient-to-r from-white to-grey-300">
+       
+        <h1 class="text-2xl py-2 text-white font-extrabold">Reach out to me here</h1>
+    <div class="flex items-center">
+        <div class="icon mr-2 w-min rounded-md">
+            <i class="ri-map-pin-line"></i>
+        </div>
+        <h2 class="location text-2xl text-white">Location : Noida, India </h2>
+    </div>
+
+    <div class="flex items-center">
+        <div class="icon mr-2 w-min rounded-md">
+            <i class="ri-mail-line"></i>
+        </div>
+        <h2 class="email text-2xl text-white">Email : singhvaibhav1710@gmail.com </h2>
+    </div>
+
+   
+    <div class="flex items-center">
+        <div class="icon mr-2 w-min rounded-md">
+            <i class="ri-graduation-cap-fill"></i>
+        </div>
+        <h2 class="language text-2xl text-white">Education : JSS Academy of Technical Education, Noida </h2>
+    </div>
+
+     <div class="flex items-center">
+        <div class="icon mr-2 w-min rounded-md">
+            <i class="ri-earth-fill"></i>
+        </div>
+        <h2 class="language text-2xl text-white">Languages : English, Hindi </h2>
+    </div>
+    </div>
+
+
+
+    <form action="/send" method="POST">
+        <div class="flex flex-col justify-center items-center m-auto mt-20 px-5 py-5 ">
+        <input class="w-3/5 mb-4 bg-zinc-700 text-white rounded-3xl py-3 px-4"  type="text" id="name" name="name" placeholder="Enter Your Name" required>
+        <input class="w-3/5 mb-4 bg-zinc-700 text-white rounded-3xl py-3 px-4" type="email" id="email" placeholder="Enter Your Email" name="email" required>
+        <input class="w-3/5 mb-4 bg-zinc-700 text-white rounded-3xl py-3 px-4" type="text" id="subject" placeholder="Subject" name="subject" required>
+        <textarea class="w-3/5 resize-none h-32 py-2 px-4 p-2 mb-4 bg-zinc-700 text-white rounded-3xl" name="message" id="" cols="15" rows="8" placeholder="Message"></textarea>
+        
+        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-500 to-red-700 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            Send 
+            <i class="ri-send-plane-fill "></i>
+            </span>
+      </button>
+       </div>
+       
+      </form>
+    
+  
+
+ 
+</div>
+
+<% include ./partials/footer.ejs  %>
