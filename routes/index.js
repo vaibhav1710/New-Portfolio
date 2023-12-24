@@ -29,6 +29,11 @@ router.get("/success", function(req,res,next){
   }
 })
 
+
+router.get("/insta", function(req,res,next){
+  res.render("colors");
+})
+
 router.post("/send", async function(req,res,next){
   
   const { name, email, subject, message } = req.body;
@@ -62,7 +67,7 @@ router.post("/send", async function(req,res,next){
 
 
 router.get('/downloadCV', (req, res) => {
- res.download("./public/Vaibhav_Singh_ResumeD.pdf")
+ res.download("./public/Vaibhav_Singh_ResumeD.pdf");
 });
 
 module.exports = router;
