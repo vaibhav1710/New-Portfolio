@@ -1,26 +1,26 @@
 <% include ./partials/header.ejs  %>
 
-<div class="min-h-screen bg-black">
+<div class="min-h-screen <%= isDarkMode ? 'bg-black text-white' : 'bg-white text-black'%>">
 
-    <div class="contactme text-center text-4xl py-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">
+    <div class="contactme text-center text-4xl py-10 font-extrabold text-transparent bg-clip-text <%= isDarkMode ? 'bg-gradient-to-r from-white to-zinc-200' : 'bg-gradient-to-r from-black to-gray-800'%>">
          Contact Me
     </div>
 
-    <div class="details  w-4/5 m-auto  text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">
+    <div class="details  w-4/5 m-auto  text-transparent bg-clip-text <%= isDarkMode ? 'bg-gradient-to-r from-white to-zinc-200' : 'bg-gradient-to-r from-black to-gray-800'%>">
        
-        <h1 class="text-2xl py-2 text-white font-extrabold">Reach out to me here</h1>
+        <h1 class="text-2xl py-2  font-extrabold">Reach out to me here</h1>
     <div class="flex items-center">
         <div class="icon mr-2 w-min rounded-md">
             <i class="ri-map-pin-line"></i>
         </div>
-        <h2 class="location text-2xl text-white">Location : Noida, India </h2>
+        <h2 class="location text-2xl ">Location : Noida, India </h2>
     </div>
 
     <div class="flex items-center">
         <div class="icon mr-2 w-min rounded-md">
             <i class="ri-mail-line"></i>
         </div>
-        <h2 class="email text-2xl text-white">Email : singhvaibhav1710@gmail.com </h2>
+        <h2 class="email text-2xl ">Email : singhvaibhav1710@gmail.com </h2>
     </div>
 
    
@@ -28,14 +28,14 @@
         <div class="icon mr-2 w-min rounded-md">
             <i class="ri-graduation-cap-fill"></i>
         </div>
-        <h2 class="language text-2xl text-white">Education : JSS Academy of Technical Education, Noida </h2>
+        <h2 class="language text-2xl ">Education : JSS Academy of Technical Education, Noida </h2>
     </div>
 
      <div class="flex items-center">
         <div class="icon mr-2 w-min rounded-md">
             <i class="ri-earth-fill"></i>
         </div>
-        <h2 class="language text-2xl text-white">Languages : English, Hindi </h2>
+        <h2 class="language text-2xl ">Languages : English, Hindi </h2>
     </div>
     </div>
 

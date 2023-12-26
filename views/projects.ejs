@@ -1,12 +1,12 @@
 <% include ./partials/header.ejs  %>
 
-<div class="min-h-screen bg-black">
+<div class="min-h-screen <%= isDarkMode ? 'bg-black text-white' : 'bg-white text-black'%>">
 
-    <div class="myportfolio text-center text-4xl p-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-200">
+    <div class="myportfolio text-center text-4xl p-10 font-extrabold text-transparent bg-clip-text <%= isDarkMode ? 'bg-gradient-to-r from-white to-zinc-200' : 'bg-gradient-to-r from-black to-gray-800' %>">
         My Portfolio
     </div>
 
-    <p class="text-2xl m-auto text-white text-center"> Here is some of my work that I've done in various programming languages.</p>
+    <p class="text-2xl m-auto  text-center"> Here is some of my work that I've done in various programming languages.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 py-20 w-11/12 mx-auto">
    

@@ -4,21 +4,29 @@ var router = express.Router();
 const nodemailer = require("nodemailer");
 const path = require("path")
 
+
+let isDarkMode = false;
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', {isDarkMode});
+});
+
+router.get('/toggle', (req, res) => {
+  isDarkMode = !isDarkMode;
+  res.redirect('back');
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about');
+  res.render('about', {isDarkMode});
 });
 
 router.get('/projects', function(req, res, next) {
-  res.render('projects');
+  res.render('projects',  {isDarkMode});
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact');
+  res.render('contact' ,  {isDarkMode});
 });
 
 router.get("/success", function(req,res,next){
