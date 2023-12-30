@@ -3,7 +3,11 @@ module.exports = {
   content: [],
   darkMode:'class',
   theme: {
-    extend: {},
+    extend:{
+      fontFamily: {
+        'raleway': [ 'Raleway', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }

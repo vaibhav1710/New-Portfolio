@@ -7,6 +7,13 @@ const path = require("path")
 
 let isDarkMode = false;
 
+
+router.use((req,res,next)=>{
+  //req.user stores all the information of the signedIn user because of we are using passport
+  res.locals.isDarkMode = isDarkMode;
+  next();
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {isDarkMode});
@@ -56,11 +63,13 @@ router.post("/send", async function(req,res,next){
   });
   
   const mailOptions = {
-    from: `${name} <${email}>`,
+    from: `${name}  <${email}>`,
     to: "vaibhav1710hanu@gmail.com",
     subject: `${subject}`,
     text: `${message}`
   };
+
+  console.log(mailOptions);
 
   transporter.sendMail(mailOptions, function(error,info){
     if(error){
