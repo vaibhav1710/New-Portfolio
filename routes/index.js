@@ -45,9 +45,9 @@ router.get("/success", function(req,res,next){
 })
 
 
-router.get("/insta", function(req,res,next){
-  res.render("colors");
-})
+// router.get("/insta", function(req,res,next){
+//   res.render("colors");
+// })
 
 router.post("/send", async function(req,res,next){
   

@@ -10,11 +10,11 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 
-app.use(expressSession({
-  secret: 'your-secret-key', // replace with a secure secret key
-  resave: false,
-  saveUninitialized: true
-}));
+// app.use(expressSession({
+//   secret: 'your-secret-key', // replace with a secure secret key
+//   resave: false,
+//   saveUninitialized: true
+// }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
