@@ -84,7 +84,7 @@ router.post("/send", async function(req,res,next){
 
 
 router.get('/downloadCV', (req, res) => {
- res.download("./public/Vaibhav_Singh_ResumeD.pdf");
+ res.download("./public/Vaibhav_Singh_Resume.pdf");
 });
 
 module.exports = router;
