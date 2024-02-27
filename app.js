@@ -45,6 +45,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+app.listen(3000, () => {
+ console.log("listening on 3000");
+})
 
-// accept this pull request.. I am learning the openSource
+//module.exports = app;
+
+
